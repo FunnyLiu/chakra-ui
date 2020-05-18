@@ -1,5 +1,32 @@
 <br />
 
+
+# 源码分析
+
+## 文件结构
+
+``` bash
+/Users/liufang/openSource/FunnyLiu/chakra-ui/packages/chakra-ui
+├── CHANGELOG.md
+├── README.md
+├── dist
+├── src - 组件文件目录
+
+directory: 230 file: 604
+
+ignored
+
+```
+
+## 外部模块依赖
+
+请在： http://npm.broofa.com?q=@chakra-ui/core 查看
+
+## 内部模块依赖
+
+![img](./inner.svg)
+  
+
 <p align="center">
   <a href="https://github.com/chakra-ui/chakra-ui/tree/master/logo">
     <img src="https://github.com/chakra-ui/chakra-ui/blob/master/logo/logo-colored@2x.png?raw=true" alt="chakra-ui symbol" width="300" />

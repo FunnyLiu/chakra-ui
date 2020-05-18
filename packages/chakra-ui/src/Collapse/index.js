@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import { forwardRef } from "react";
 import AnimateHeight from "react-animate-height";
 import Box from "../Box";
-
+// 基于react-animate-height组件封装
 const Collapse = forwardRef(
   (
     {

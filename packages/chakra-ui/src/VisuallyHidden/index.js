@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import Box from "../Box";
-
+// 一个隐藏的div
 const VisuallyHidden = styled(Box)`
   border: 0px;
   clip: rect(0px, 0px, 0px, 0px);

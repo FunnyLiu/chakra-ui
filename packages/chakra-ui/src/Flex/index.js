@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import Box from "../Box";
-
+// 套一层属性转化而已
 const Flex = forwardRef(({ align, justify, wrap, direction, ...rest }, ref) => (
   <Box
     ref={ref}

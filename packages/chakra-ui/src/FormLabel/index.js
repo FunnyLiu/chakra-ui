@@ -19,8 +19,9 @@ export const RequiredIndicator = props => {
     />
   );
 };
-
+// 表单label组件
 export const FormLabel = forwardRef(({ children, ...props }, ref) => {
+  // 通过useContext拿到外层组件的状态属性
   const formControl = useFormControl(props);
   return (
     <Box

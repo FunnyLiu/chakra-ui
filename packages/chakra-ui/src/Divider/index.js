@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import Box from "../Box";
 import { forwardRef } from "react";
-
+// 套一层，定一套基础属性，作为hr标签
 const Divider = forwardRef(({ orientation, ...props }, ref) => {
   const borderProps =
     orientation === "vertical"

@@ -9,6 +9,7 @@ import Text from "../Text";
 
 const FormErrorMessage = forwardRef(({ children, icon, ...props }, ref) => {
   const { colorMode } = useColorMode();
+  //拿到表单状态
   const formControl = useFormControl(props);
 
   const color = {
@@ -19,7 +20,7 @@ const FormErrorMessage = forwardRef(({ children, icon, ...props }, ref) => {
   if (!formControl.isInvalid) {
     return null;
   }
-
+  //错误才会继续处理
   return (
     <Flex
       ref={ref}

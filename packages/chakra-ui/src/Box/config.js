@@ -1,5 +1,5 @@
 import { system, get } from "styled-system";
-
+// 一些配置项
 const isNumber = n => typeof n === "number" && !isNaN(n);
 const getWidth = (n, scale) =>
   get(scale, n, !isNumber(n) || n > 1 ? n : n * 100 + "%");

@@ -92,6 +92,7 @@ const AccordionItem = forwardRef(
     { isOpen, defaultIsOpen, id, isDisabled, onChange, children, ...rest },
     ref,
   ) => {
+    //isExpanded进行监听
     const [isExpanded, setIsExpanded] = useState(defaultIsOpen || false);
     const { current: isControlled } = useRef(isOpen != null);
     let _isExpanded = isControlled ? isOpen : isExpanded;
@@ -106,7 +107,7 @@ const AccordionItem = forwardRef(
 
     const headerId = `accordion-header-${uniqueId}`;
     const panelId = `accordion-panel-${uniqueId}`;
-
+    //item组件提供一些参数给context
     return (
       <AccordionItemContext.Provider
         value={{
@@ -181,6 +182,7 @@ AccordionHeader.displayName = "AccordionHeader";
 /////////////////////////////////////////////////////////////
 
 const AccordionPanel = forwardRef((props, ref) => {
+  // 均监听context上属性的变化
   const { isExpanded, panelId, headerId } = useAccordionItemContext();
   return (
     <Collapse

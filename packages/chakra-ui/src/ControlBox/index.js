@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import css from "@styled-system/css";
 import Box from "../Box";
 import { transformAliasProps } from "../Box/config";
-
+// 套了一大串样式
 const ControlBox = styled(Box)(
   ({
     type = "checkbox",

@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import { createContext, useContext, forwardRef } from "react";
 import Box from "../Box";
-
+//暴露自定义hooks，获取FormControlContext的参数们
 export const useFormControl = props => {
   const context = useFormControlContext();
   if (!context) {
@@ -22,11 +22,11 @@ export const useFormControl = props => {
     return acc;
   }, {});
 };
-
+//创建context
 const FormControlContext = createContext();
-
+//封装useContext
 export const useFormControlContext = () => useContext(FormControlContext);
-
+// 表单容器组件、
 const FormControl = forwardRef(
   ({ isInvalid, isRequired, isDisabled, isReadOnly, ...rest }, ref) => {
     const context = {

@@ -62,7 +62,7 @@ const shouldForwardProp = createShouldForwardProp([
  * https://github.com/chakra-ui/chakra-ui/issues/149
  */
 const nativeHTMLPropAlias = ["htmlWidth", "htmlHeight"];
-
+//一个基础的支持css-in-js的块状组件
 const Box = styled("div", {
   shouldForwardProp: prop => {
     if (nativeHTMLPropAlias.includes(prop)) {

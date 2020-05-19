@@ -48,7 +48,7 @@ const RadioGroup = forwardRef(
     const _name = name || fallbackName;
 
     const validChildren = cleanChildren(children);
-
+    // 将其子节点均clone
     const clones = validChildren.map((child, index) => {
       const isLastRadio = validChildren.length === index + 1;
       const spacingProps = isInline ? { mr: spacing } : { mb: spacing };
@@ -70,11 +70,12 @@ const RadioGroup = forwardRef(
       );
     });
 
-    // Calling focus() on the radiogroup should focus on the selected option or first enabled option
+    // Calling focus() on the radio group should focus on the selected option or first enabled option
     useImperativeHandle(
       ref,
       () => ({
         focus: () => {
+          //取到box组件
           let input = rootRef.current.querySelector(
             "input:not(:disabled):checked",
           );

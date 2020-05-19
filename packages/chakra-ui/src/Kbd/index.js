@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import Box from "../Box";
 import { useColorMode } from "../ColorModeProvider";
-
+// box包一层
 const Kbd = props => {
   const { colorMode } = useColorMode();
   const bg = { light: "gray.100", dark: "whiteAlpha.50" };

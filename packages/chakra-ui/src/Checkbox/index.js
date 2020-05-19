@@ -8,7 +8,7 @@ import Icon from "../Icon";
 import VisuallyHidden from "../VisuallyHidden";
 import useCheckboxStyle from "./styles";
 import { useForkRef, useVariantColorWarning } from "../utils";
-
+// box,control box
 const Checkbox = forwardRef(
   (
     {

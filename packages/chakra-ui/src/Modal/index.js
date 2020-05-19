@@ -39,6 +39,7 @@ function useAriaHider({
 
   useEffect(() => {
     let undoAriaHidden = null;
+    // 拿到了需要挂载的dom
     let mountNode = mountRef.current;
 
     if (isOpen && canUseDOM) {
@@ -109,7 +110,7 @@ const Modal = ({
     addAriaLabelledby = addAriaLabels;
     addAriaDescribedby = addAriaLabels;
   }
-
+  // 管理body是否可以拖动的副作用封装
   useEffect(() => {
     const dialogNode = contentRef.current;
     if (isOpen && blockScrollOnMount) {

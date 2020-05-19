@@ -29,7 +29,7 @@ const spin = keyframes`
     transform: rotate(360deg);
   }
 `;
-
+// box包一层
 export const CircularProgressLabel = props => (
   <Box
     position="absolute"

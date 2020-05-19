@@ -7,7 +7,7 @@ import PseudoBox from "../PseudoBox";
 import useNumberInput from "../useNumberInput";
 import { useForkRef, wrapEvent } from "../utils";
 import styleProps from "./styles";
-
+// 创建自己的context
 const NumberInputContext = createContext({});
 const useNumberInputContext = () => {
   const context = useContext(NumberInputContext);

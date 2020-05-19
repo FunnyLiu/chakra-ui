@@ -11,7 +11,7 @@ export const statuses = {
   success: { icon: "check-circle", color: "green" },
   error: { icon: "warning", color: "red" },
 };
-
+// 封装context
 const AlertContext = createContext();
 const useAlertContext = () => {
   const context = useContext(AlertContext);

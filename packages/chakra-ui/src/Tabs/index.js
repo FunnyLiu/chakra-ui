@@ -41,7 +41,7 @@ const Tab = forwardRef((props, ref) => {
 Tab.displayName = "Tab";
 
 ////////////////////////////////////////////////////////////////////////
-
+// 基于flex
 const TabList = forwardRef((props, ref) => {
   const { children, onKeyDown, onClick, ...rest } = props;
 
@@ -207,7 +207,7 @@ const TabPanels = forwardRef(({ children, ...rest }, ref) => {
 TabPanels.displayName = "TabPanels";
 
 ////////////////////////////////////////////////////////////////////////
-
+//创建context
 export const TabContext = createContext();
 
 const Tabs = forwardRef(

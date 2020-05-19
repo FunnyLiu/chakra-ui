@@ -47,6 +47,7 @@ const Accordion = ({
   const validChildren = cleanChildren(children);
 
   const clones = validChildren.map((child, childIndex) => {
+    //克隆一个React组件
     return cloneElement(child, {
       isOpen: getExpandCondition(_index, childIndex),
       onChange: isExpanded => {

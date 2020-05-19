@@ -6,6 +6,7 @@ import Flex from "../Flex";
 import Box from "../Box";
 
 // TODO: Reduce complexity by deprecating isInline and isReversed prop
+// flex配合box包一层
 const Stack = forwardRef(
   (
     {

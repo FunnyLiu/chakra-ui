@@ -17,7 +17,7 @@ const baseStyleProps = {
     textDecoration: "none",
   },
 };
-
+// 套一个PseudoBox
 const Link = forwardRef(({ isDisabled, isExternal, onClick, ...rest }, ref) => {
   const externalProps = isExternal
     ? { target: "_blank", rel: "noopener noreferrer" }

@@ -20,7 +20,7 @@ const sizes = {
   lg: "2rem",
   xl: "3rem",
 };
-
+// 套一个box加参数
 const Spinner = forwardRef(
   (
     {

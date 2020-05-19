@@ -51,9 +51,12 @@ to   { opacity: 1; }
 const fadeInCss = duration => css`
   animation: ${fadeIn} ${duration}s;
 `;
-
+// box包一层
+// 骨架屏组件
 const Skeleton = props => {
+  //拿到主题色
   const { colors } = useTheme();
+  //拿到色彩模式，明亮或是暗黑色系
   const { colorMode } = useColorMode();
   const defaultStart = { light: colors.gray[100], dark: colors.gray[800] };
   const defaultEnd = { light: colors.gray[400], dark: colors.gray[600] };
@@ -65,6 +68,7 @@ const Skeleton = props => {
     speed = 0.8,
     ...rest
   } = props;
+  // 利用useMemo来优化性能用
   const fadeInStyle = useMemo(() => fadeInCss(fadeInDuration), [
     fadeInDuration,
   ]);

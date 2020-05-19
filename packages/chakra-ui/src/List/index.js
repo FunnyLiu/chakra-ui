@@ -21,6 +21,7 @@ const List = forwardRef(
         {...props}
       >
         {validChildren.map((child, index) => {
+          // 利用Children的api来判断
           const isLast = index + 1 === Children.count(children);
           if (isLast) {
             return child;

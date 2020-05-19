@@ -2,12 +2,13 @@
 import { jsx } from "@emotion/core";
 import { useEffect, useState, forwardRef, useRef } from "react";
 import Box from "../Box";
-
+// 自定义image loaded的hooks
 export function useHasImageLoaded(props) {
   const { src, onLoad, onError, enabled = true } = props;
+  //利用useRef来做标识位
   const isMounted = useRef(true);
   const [hasLoaded, setHasLoaded] = useState(false);
-
+  // 副作用
   useEffect(() => {
     if (!src || !enabled) {
       return;
@@ -18,6 +19,7 @@ export function useHasImageLoaded(props) {
 
     image.onload = event => {
       if (isMounted.current) {
+        //调用useState的内容
         setHasLoaded(true);
         onLoad && onLoad(event);
       }
@@ -29,8 +31,9 @@ export function useHasImageLoaded(props) {
         onError && onError(event);
       }
     };
+    // 以下值变化了才触发
   }, [src, onLoad, onError, enabled]);
-
+  //将标识位置为false
   useEffect(() => {
     return () => {
       isMounted.current = false;
